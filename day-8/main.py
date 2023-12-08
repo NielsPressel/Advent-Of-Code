@@ -30,7 +30,6 @@ class Graph:
 
         for line in lines:
             node = Node.parse(line)
-
             result[node.label] = node
         
         return Graph(result)
