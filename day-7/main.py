@@ -165,8 +165,6 @@ first_hands = []
 for line in input_text:
     first_hands.append(Hand.parse(line, False))
 
-
-
 first_sum = 0
 first_hands.sort()
 for index, hand in enumerate(first_hands):
