@@ -39,10 +39,9 @@ def create_map(grid: list[str], increase: int):
     
     return result
 
-
-
 def manhattan_dist(g1: tuple[int, int], g2: tuple[int, int]):
     return abs(g2[0] - g1[0]) + abs(g2[1] - g1[1])
+
 
 input_text = []
 
@@ -69,4 +68,4 @@ second_sum = 0
 for a, b in itertools.combinations(m2.keys(), 2):
     second_sum += manhattan_dist(m2[a], m2[b])
 
-print(f"Answer first part: {second_sum}")
+print(f"Answer second part: {second_sum}")
