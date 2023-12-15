@@ -1,5 +1,4 @@
 import os
-import copy
 import functools
 
 def tilt_north(pattern: list[list[str]]):
