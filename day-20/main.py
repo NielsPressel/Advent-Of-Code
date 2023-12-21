@@ -147,8 +147,6 @@ def find_cycles(input_map: dict[str, list[str]], modules: dict[str, Module]):
         q: SimpleQueue[Pulse] = SimpleQueue()
         q.put(Pulse("", "broadcaster", False))
 
-        hp = 0
-        lp = 1
         while not q.empty():
             item = q.get()
 
@@ -164,11 +162,6 @@ def find_cycles(input_map: dict[str, list[str]], modules: dict[str, Module]):
 
             for r in result:
                 q.put(r)
-
-                if r.state == True:
-                    hp += 1
-                else:
-                    lp += 1
         
         cycle += 1
     
